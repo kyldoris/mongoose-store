@@ -8,7 +8,7 @@
     <a href="/">Back to Index</a>
     <h1>Edit <%=product.name%></h1>
     <form action="/products/<%=productId%>?_method=PUT" method="POST">
-      <!--KYLER:  NOTE: the form is pre-populated with values for the server-->
+      <!-- help from study group -->
       <input type="text" name="name" value="<%=product.name%>" placeholder="name" /><br />
       <input type="text" name="img" value="<%=product.img%>" placeholder="img (url)"/><br />
       <input type="text" name="description" value="<%=product.description%>" placeholder="description"/><br />

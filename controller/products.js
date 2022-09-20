@@ -1,3 +1,5 @@
+//I had help from our study group//
+
 //DEPENDENCIES
 require("dotenv").config();
 const methodOverride = require("method-override");
@@ -7,9 +9,6 @@ const express = require('express');
 const productsRouter = express.Router(); 
 const Store = require ('../models/products')
 const products = require('../models/items')
-
-
-
 
 
 // NEW

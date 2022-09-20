@@ -16,8 +16,8 @@
         <img src=<%=product.img %> ><br />
         Price: $<%=product.price %> <br />
         Quantity: <%= product.description %> <br />
-            <!-- code below provided and helped understood by kyler -->
-            <% if (product.qty <= 0) { %>
+      <!-- help from study group -->
+      <% if (product.qty <= 0) { %>
 			    <p>All out! you snooze you lose :)</p>
 		    <% } %>
             <% if (product.qty > 0) { %>		
