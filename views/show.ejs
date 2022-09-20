@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Products</title>
+    </head>
+    <body>
+        <nav>
+            <a href="/">Back to Products Index</a>
+        </nav>
+
+        Product: <%=product.name %> <br />
+        Description: <%=product.description %> <br />
+        <img src=<%=product.img %> ><br />
+        Price: $<%=product.price %> <br />
+        Quantity: <%= product.description %> <br />
+            <!-- code below provided and helped understood by kyler -->
+            <% if (product.qty <= 0) { %>
+			    <p>All out! you snooze you lose :)</p>
+		    <% } %>
+            <% if (product.qty > 0) { %>		
+                <form action="/products/<%=productId%>/buy?_method=PUT" method="POST">
+                <input class="delete"type="submit" value="Buy">
+            </form>
+            <% } %>
+        <form action="/products/<%=productId%>/edit">
+        <input class="delete"type='submit' value="Edit"/>
+        </form>
+    </body>
+</html>
